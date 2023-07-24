@@ -138,9 +138,7 @@ namespace A14
             insertion(a3);
             sw3.Stop();
 
-            long time1 = sw1.ElapsedTicks;
-            long time2 = sw2.ElapsedTicks;
-            long time3 = sw3.ElapsedTicks;
+            
 
             Console.WriteLine("After sorting using bubble sort ");
             print(a1);
@@ -152,9 +150,9 @@ namespace A14
             {
                 Console.WriteLine("Array is not sorted correctly");
             }
-            Console.WriteLine($"Time taken to perform bubblesort is {time1} milliseconds");
-            Console.WriteLine($"Time taken to perform selection sort is {time2} milliseconds");
-            Console.WriteLine($"Time taken to perform insertion sort is {time3} milliseconds");
+            Console.WriteLine($"Time taken to perform bubblesort is {sw1.Elapsed.TotalMilliseconds} milliseconds");
+            Console.WriteLine($"Time taken to perform selection sort is {sw2.Elapsed.TotalMilliseconds} milliseconds");
+            Console.WriteLine($"Time taken to perform insertion sort is {sw3.Elapsed.TotalMilliseconds} milliseconds");
 
             Console.ReadKey();
         }
